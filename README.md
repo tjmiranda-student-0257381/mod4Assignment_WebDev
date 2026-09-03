@@ -1,5 +1,5 @@
 # COMP001A.Module4-Assignment
-<b>Web Developer</b>
+<b>Web Developer</b><br>
 <i>Lecture Activity 4</i><BR><BR>
 <b>Author:</b> <a href="https://github.com/tjmiranda-student-0257381" target="blank">TJ Miranda</a><br>
 <b>Purpose:</b> <a href="https://github.com/tjmiranda-student-0257381/COMP001A.LectureActivity4" target="blank">Lecture Activity 4</a><br>
