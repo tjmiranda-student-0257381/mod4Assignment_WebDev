@@ -7,37 +7,37 @@
     <title>Services - TJ Miranda's Portfolio</title>
   </head>
   <body>
-    <bgimage src="images/coin.PNG" alt="coin" class="My US Army Coin" />
-    <header>
-      <nav class="navbar">
-        <a href="#" class="logo">it's me TJ</a>
+    <div class="container">
+      <header>
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <span class="logo-prefix">it's me</span>
+            <span class="logo-name">TJ</span>
+          </a>
 
-        <!-- Hidden Checkbox Toggle -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
-        <!-- BurgerFriesTapsilog -->
-        <label
-          for="menu-toggle"
-          class="hamburger-label"
-          aria-label="Toggle navigation"
-        >
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </label>
+          <label
+            for="menu-toggle"
+            class="hamburger-label"
+            aria-label="Toggle navigation"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
 
-        <!-- Navigation Links -->
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="photos.html" class="nav-link">Photos</a></li>
-          <li><a href="faqs.html" class="nav-link">FAQs</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="inquire-now">
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="resume.html" class="nav-link">Resume</a></li>
+            <li><a href="faqs.html" class="nav-link">FAQs</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
         <h2>My Services</h2>
         <p>
           I offer a range of web development and design services, including
@@ -51,87 +51,154 @@
           processes and ensure that your documents are completed accurately and
           submitted on time.
         </p>
-        <br /><br />
-        <div class="form-container">
-          <h2>Inquire Now</h2>
-          <!-- Free Form From Formspree.io sa student gmail account ko ang diretso -->
-          <form action="https://formspree.io/f/mrpglgkq" method="POST">
-            <!-- Subject (Dropdown) -->
-            <div class="form-group">
-              <label for="subject">Subject *</label>
-              <select id="subject" name="subject" required>
-                <option value="" disabled selected>Select a topic...</option>
-                <option value="Website Development">Website Development</option>
-                <option value="US Immigration Assistance">
-                  US Immigration Assistance
-                </option>
-                <option value="Divorce Paperwork Assistance">
-                  Divorce Paperwork Assistance
-                </option>
-              </select>
-            </div>
 
-            <!-- Full Name -->
-            <div class="form-group">
-              <label for="fullname">Full Name *</label>
-              <input
-                type="text"
-                id="fullname"
-                name="fullname"
-                placeholder="John Doe"
-                required
-              />
-            </div>
+        <section id="services-details">
+          <!-- Service 1: Web Development -->
+          <article id="webdev" class="service-card">
+            <h2>Web Development</h2>
+            <p>
+              I offer end-to-end web development services tailored to modern,
+              responsive, and user-friendly standards. Whether you need a
+              brand-new personal portfolio, an online business store, or custom
+              front-end styling using standard HTML, CSS, and JavaScript, I
+              build websites designed to present your content clearly across all
+              devices.
+            </p>
+            <ul>
+              <li>Responsive and mobile-friendly site layouts</li>
+              <li>Custom CSS styling and interface design</li>
+              <li>Form integrations and website maintenance</li>
+            </ul>
+          </article>
 
-            <!-- Email Address -->
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="name@example.com"
-                required
-              />
-            </div>
+          <!-- Service 2: Immigration Consulting -->
+          <article id="immigration" class="service-card">
+            <h2>Immigration Consulting</h2>
+            <p>
+              Navigating United States Immigration and Naturalization paperwork
+              can be complex and overwhelming. I assist clients in Kings County
+              and beyond by providing dedicated assistance with form
+              preparation, document gathering, and administrative procedures for
+              family petitions, adjustments of status, and citizenship
+              applications.
+            </p>
+            <ul>
+              <li>
+                Family-based visa petitions and affidavit of support guidance
+              </li>
+              <li>Naturalization and citizenship paperwork preparation</li>
+              <li>Document accuracy review before official submission</li>
+            </ul>
+          </article>
 
-            <!-- Contact Number -->
-            <div class="form-group">
-              <label for="phone">Contact Number *</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="(555) 000-0000"
-                required
-              />
-            </div>
+          <!-- Service 3: Divorce Processing -->
+          <article id="divorce" class="service-card">
+            <h2>Divorce Processing</h2>
+            <p>
+              Filing for divorce involves detailed legal paperwork that must be
+              executed accurately and on schedule. I provide procedural
+              paperwork assistance to help individuals process uncontested
+              divorce filings smoothly, ensuring form accuracy and proper
+              document organization throughout the process.
+            </p>
+            <ul>
+              <li>Preparation of dissolution forms and initial petitions</li>
+              <li>Help with filing workflows and procedural timelines</li>
+              <li>Organized document processing for uncontested matters</li>
+            </ul>
+          </article>
+        </section>
 
-            <!-- Date of Birth -->
-            <div class="form-group">
-              <label for="dob">Date of Birth *</label>
-              <input type="date" id="dob" name="dob" required />
-            </div>
+        <section id="inquire-now">
+          <div class="form-container">
+            <h2>Inquire Now</h2>
+            <form action="https://formspree.io/f/mrpglgkq" method="POST">
+              <div class="form-grid">
+                <div class="form-left">
+                  <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                      <option value="" disabled selected>
+                        Select a topic...
+                      </option>
+                      <option value="Website Development">
+                        Website Development
+                      </option>
+                      <option value="US Immigration Assistance">
+                        US Immigration Assistance
+                      </option>
+                      <option value="Divorce Paperwork Assistance">
+                        Divorce Paperwork Assistance
+                      </option>
+                    </select>
+                  </div>
 
-            <!-- Message -->
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea maxlength="1500" rows="25" cols="58"
-                id="message"
-                name="message"
-                placeholder="Write your message here..."
-                required
-              ></textarea><br><br>
+                  <div class="form-group">
+                    <label for="fullname">Full Name *</label>
+                    <input
+                      type="text"
+                      id="fullname"
+                      name="fullname"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
 
-            <!-- Submit Button -->
-            <button type="submit" class="submit-btn">Send Message</button>
-          </form>
-        </div>
-      </section>
-      <!-- <image src="images/coin.PNG" alt="coin" class="My US Army Coin" max-width="100px" max-height="100px" /> -->
-    </main>
-    <footer>
-      <p>&copy; 2024 TJ Miranda. All rights reserved.</p>
-    </footer>
+                  <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="name@example.com"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">Contact Number *</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="(555) 000-0000"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="dob">Date of Birth *</label>
+                    <input type="date" id="dob" name="dob" required />
+                  </div>
+                </div>
+
+                <div class="form-right">
+                  <div class="form-group message-group">
+                    <label for="message">Message *</label>
+                    <textarea
+                      maxlength="1500"
+                      id="message"
+                      name="message"
+                      placeholder="Write your message here..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="button-wrapper">
+                    <button type="submit" class="submit-btn">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2024 TJ Miranda. All rights reserved.</p>
+      </footer>
+    </div>
   </body>
 </html>

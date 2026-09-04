@@ -1,29 +1,113 @@
-/* Primary stylesheet for COMP001A Module 4 Assignment: Web Developer
-   Author: TJ Miranda */
-body {
-    font-family: sans-serif;
-    padding: 1em;
-    max-width: 600px;
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /*this ensures the footer is at the bottom of the page even if there is not enough content to fill the page*/
-    margin: 0;
+/* Custom Logo Styles */
+.logo {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
+.logo-prefix {
+  font-weight: 300;
+  color: #cccccc;
+  font-size: 1.1rem;
+  text-transform: lowercase;
+}
+
+.logo-name {
+  font-weight: 800;
+  color: #ffffff;
+  background-color: #007bff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+/* Primary stylesheet for COMP001A Module 4 Assignment: Web Developer
+   Author: TJ Miranda */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  background-color: #f4f4f4;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333; /* Matches header/navbar background */
+  color: #fff;            /* Matches header text color */
+  padding: 1rem 1.5rem;   /* Matches header padding */
+  text-align: center;
+}
+
+footer a {
+  color: #fff;            /* Ensures any links in the footer also match header text */
+}
+
+.container {
+  max-width: 900px; /* Adjust max width as needed */
+  width: 90%;       /* Ensures responsiveness on smaller mobile screens */
+  margin: 0 auto;   /* Sets top/bottom margins to 0 and left/right to auto (centers the container) */
+  background-color: #d9d6d6af; /* Sets background color inside the centered content box */
+  padding: 20px;    /* Adds inner spacing around content */
+  box-sizing: border-box;
+}
+
+/* Services Section Styling */
+#services-details {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background-color: #f6eaea;
+  padding: 24px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  scroll-margin-top: 20px; /* Provides padding when scrolling via anchor links */
+}
+
+.service-card h2 {
+  color: #1a2a3a;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 6px;
+  margin-top: 0;
+}
+
+.service-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #444444;
+}
+
+/* Form Styles */
 .form-container {
-  background: #ffffff;
+  background: #f7f4f4;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 450px;
+  max-width: 100%; /* Set to 100% to match full width of service cards */
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .form-container h2 {
   margin-bottom: 20px;
   color: #333333;
   text-align: center;
+}
+
+/* 2-Column Grid for Form Layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .form-group {
@@ -39,24 +123,53 @@ body {
 }
 
 .form-group input,
-.form-group select {
+.form-group select,
+.form-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 .form-group input:focus,
-.form-group select:focus {
+.form-group select:focus,
+.form-group textarea:focus {
   outline: none;
   border-color: #007bff;
 }
 
+/* Right Column Flex Layout */
+.form-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.message-group textarea {
+  flex: 1;
+  min-height: 220px;
+  resize: vertical;
+}
+
+/* Submit Button & Alignment */
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
 .submit-btn {
-  width: 100%;
-  padding: 12px;
+  width: auto;
+  min-width: 150px;
+  padding: 12px 24px;
   background-color: #007bff;
   border: none;
   border-radius: 4px;
@@ -71,22 +184,22 @@ body {
   background-color: #0056b3;
 }
 
+/* Page Content Typography & General Styles */
 main {
-    flex: 1; /*this ensures the main content area takes up all available space, pushing the footer to the bottom of the page*/
+  flex: 1; /* Ensures the main content area takes up all available space, pushing the footer to the bottom */
 }
 
 h1 {    
-    font-size: 180%;
-    color: #0033cc;
+  font-size: 180%;
+  color: #0033cc;
 }
 
 h2 {
-    font-size: 140%;
-    
+  font-size: 140%;
 }
 
 ul {
-    list-style-type: square;
+  list-style-type: square;
 }
 
 div img {
@@ -98,6 +211,7 @@ a {
   text-decoration: none;
 }
 
+/* Navigation Bar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -105,13 +219,6 @@ a {
   background-color: #333;
   padding: 1rem 1.5rem;
   position: relative;
-}
-
-.logo {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5rem;
 }
 
 .nav-menu {
@@ -153,6 +260,18 @@ a {
 
 /* Mobile Styles (Screens 768px and smaller) */
 @media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* Stacks form into 1 column on mobile */
+  }
+
+  .button-wrapper {
+    justify-content: stretch;
+  }
+
+  .submit-btn {
+    width: 100%; /* Full width submit button on mobile screens */
+  }
+
   .hamburger-label {
     display: flex; /* Display hamburger icon on mobile */
   }
@@ -171,14 +290,13 @@ a {
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
   }
 
-  /* --- THE PURE CSS TOGGLE MAGIC --- */
-  /* When checkbox is checked, expand the sibling .nav-menu */
+  /* --- PURE CSS TOGGLE --- */
   .menu-toggle:checked ~ .nav-menu {
-    max-height: 300px; /* Adjust based on menu height */
+    max-height: 300px;
     padding: 1rem 0;
   }
 
-  /* Optional: Animate Hamburger icon into an 'X' when checked */
+  /* Animate Hamburger icon into an 'X' when checked */
   .menu-toggle:checked ~ .hamburger-label .bar:nth-child(1) {
     transform: translateY(8.5px) rotate(45deg);
   }
