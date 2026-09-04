@@ -42,6 +42,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 div img {
@@ -59,13 +60,14 @@ div img {
   gap: 6px;
 }
 
+/* --- ito yung kulay ng first part ng text logo ng website --- */
 .logo-prefix {
   font-weight: 300;
   color: #cccccc;
   font-size: 1.1rem;
   text-transform: lowercase;
 }
-
+/* --- ito yung kulay ng TJ sa logo ng website --- */
 .logo-name {
   font-weight: 800;
   color: #ffffff;
