@@ -1,4 +1,55 @@
-/* Custom Logo Styles */
+/* ==========================================
+   Primary Stylesheet for COMP001A Web Development Module 4 Assignment
+   Author: TJ Miranda
+   ========================================== */
+
+/* --- Base & Reset Styles --- */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+main {
+  flex: 1; /* Pushes footer to the bottom */
+}
+
+.container {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #d9d6d6af;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* --- Typography & Global Elements --- */
+h1 {
+  font-size: 180%;
+  color: #0033cc;
+}
+
+h2 {
+  font-size: 140%;
+}
+
+ul {
+  list-style-type: square;
+}
+
+a {
+  text-decoration: none;
+}
+
+div img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Custom Logo Styles --- */
 .logo {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
@@ -24,6 +75,52 @@
   letter-spacing: 1px;
 }
 
+/* --- Navigation Bar Styles --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.menu-toggle {
+  display: none; /* Hide checkbox */
+}
+
+.hamburger-label {
+  display: none; /* Hide on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- Profile & Coin Media Styles --- */
 .biopic {
   float: right;
   width: 100px;
@@ -31,16 +128,14 @@
   border-radius: 50%;
 }
 
-/* Flexbox wrapper to align coins side-by-side */
 .coins-container {
   display: flex;
-  justify-content: center; /* Horizontally centers the coins */
-  align-items: center;     /* Vertically aligns the coins */
-  gap: 20px;               /* Space between Army and Navy coins */
-  margin: 25px 0;          /* Spacing above and below the coins section */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 25px 0;
 }
 
-/* Centered 1.5in x 1.5in coins */
 .coins {
   display: inline-block;
   width: 1.5in;
@@ -49,41 +144,7 @@
   object-fit: cover;
 }
 
-/* Primary stylesheet for COMP001A Module 4 Assignment: Web Developer
-   Author: TJ Miranda */
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center;     /* Vertically center */
-  background-color: #f4f4f4;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #333; /* Matches header/navbar background */
-  color: #fff;            /* Matches header text color */
-  padding: 1rem 1.5rem;   /* Matches header padding */
-  text-align: center;
-  clear: both;            /* Prevents floats from overflowing into the footer */
-}
-
-footer a {
-  color: #fff;            /* Ensures any links in the footer also match header text */
-}
-
-.container {
-  max-width: 900px; /* Adjust max width as needed */
-  width: 90%;       /* Ensures responsiveness on smaller mobile screens */
-  margin: 0 auto;   /* Sets top/bottom margins to 0 and left/right to auto (centers the container) */
-  background-color: #d9d6d6af; /* Sets background color inside the centered content box */
-  padding: 20px;    /* Adds inner spacing around content */
-  box-sizing: border-box;
-}
-
-/* Services Section Styling */
+/* --- Services Section Styles --- */
 #services-details {
   margin-top: 30px;
   margin-bottom: 40px;
@@ -95,7 +156,7 @@ footer a {
   margin-bottom: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  scroll-margin-top: 20px; /* Provides padding when scrolling via anchor links */
+  scroll-margin-top: 20px;
 }
 
 .service-card h2 {
@@ -111,14 +172,14 @@ footer a {
   color: #444444;
 }
 
-/* Form Styles */
+/* --- Form Styles --- */
 .form-container {
   background: #f7f4f4;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 100%; /* Set to 100% to match full width of service cards */
+  max-width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -129,7 +190,6 @@ footer a {
   text-align: center;
 }
 
-/* 2-Column Grid for Form Layout */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -167,7 +227,6 @@ footer a {
   border-color: #007bff;
 }
 
-/* Right Column Flex Layout */
 .form-right {
   display: flex;
   flex-direction: column;
@@ -185,7 +244,6 @@ footer a {
   resize: vertical;
 }
 
-/* Submit Button & Alignment */
 .button-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -210,84 +268,25 @@ footer a {
   background-color: #0056b3;
 }
 
-/* Page Content Typography & General Styles */
-main {
-  flex: 1; /* Ensures the main content area takes up all available space, pushing the footer to the bottom */
-}
-
-h1 {    
-  font-size: 180%;
-  color: #0033cc;
-}
-
-h2 {
-  font-size: 140%;
-}
-
-ul {
-  list-style-type: square;
-}
-
-div img {
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* Navigation Bar Styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* --- Footer Styles --- */
+footer {
   background-color: #333;
-  padding: 1rem 1.5rem;
-  position: relative;
-}
-
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-link {
   color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  clear: both;
 }
 
-/* Hide the Checkbox entirely */
-.menu-toggle {
-  display: none;
+footer a {
+  color: #fff;
 }
 
-/* Hide Hamburger Label on Desktop */
-.hamburger-label {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.bar {
-  height: 3px;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 2px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Mobile Styles (Screens 768px and smaller) */
+/* ==========================================
+   Responsive Styles (Para sa Mobile View)
+   ========================================== */
 @media (max-width: 768px) {
   .form-grid {
-    grid-template-columns: 1fr; /* Stacks form into 1 column on mobile */
+    grid-template-columns: 1fr;
   }
 
   .button-wrapper {
@@ -295,11 +294,11 @@ a {
   }
 
   .submit-btn {
-    width: 100%; /* Full width submit button on mobile screens */
+    width: 100%;
   }
 
   .hamburger-label {
-    display: flex; /* Display hamburger icon on mobile */
+    display: flex;
   }
 
   .nav-menu {
@@ -311,24 +310,25 @@ a {
     flex-direction: column;
     align-items: center;
     padding: 0;
-    max-height: 0; /* Hide menu by collapsing height */
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
   }
 
-  /* --- PURE CSS TOGGLE --- */
+  /* Hamburger Toggle Animation & Menu Open */
   .menu-toggle:checked ~ .nav-menu {
     max-height: 300px;
     padding: 1rem 0;
   }
 
-  /* Animate Hamburger icon into an 'X' when checked */
   .menu-toggle:checked ~ .hamburger-label .bar:nth-child(1) {
     transform: translateY(8.5px) rotate(45deg);
   }
+
   .menu-toggle:checked ~ .hamburger-label .bar:nth-child(2) {
     opacity: 0;
   }
+
   .menu-toggle:checked ~ .hamburger-label .bar:nth-child(3) {
     transform: translateY(-8.5px) rotate(-45deg);
   }

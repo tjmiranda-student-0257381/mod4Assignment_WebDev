@@ -5,6 +5,13 @@
     <link rel="stylesheet" href="main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - TJ Miranda's Portfolio</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
     <div class="container">
@@ -15,10 +22,8 @@
             <span class="logo-name">TJ</span>
           </a>
 
-          <!-- Hidden Checkbox Toggle -->
           <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
-          <!-- BurgerFriesTapsilog -->
           <label
             for="menu-toggle"
             class="hamburger-label"
@@ -29,7 +34,6 @@
             <span class="bar"></span>
           </label>
 
-          <!-- Nav Links -->
           <ul class="nav-menu">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
@@ -48,7 +52,6 @@
           </p>
         </section>
 
-        <!-- NEW RESUME SECTION PLACED BEFORE FIVE FUN FACTS -->
         <section id="resume-summary">
           <h2>Professional Background & Experience</h2>
           <p>
@@ -99,8 +102,20 @@
             </p>
           </div>
         </section>
-
-        <!-- Added my short biography with my picture-->
+<!-- beginning of the video section -->
+      <section id="video">
+        <!--heading for the video section-->
+        <h2>My Graduation video as USO Apprentice</h2>
+        <!-- the 'controls' attribute adds video controls, like play, pause, and volume -->
+        <video width="320" height="240" controls>
+          <!--source for the video file-->
+          <!--the src attribute specifies the path to the video file-->
+          <source src="media/video.mp4" type="video/mp4" />
+          <!--fallback message in case video is not supported by the browser-->
+          Your browser does not support the video element.
+        </video>
+      </section>
+      <!--end of the video section-->
         <h2>Biography</h2>
         <div class="biography image">
           <img src="images/tjm.png" alt="TJ Miranda" class="biopic" />
@@ -126,9 +141,6 @@
             at my computer, I still love playing basic guitar and drums to keep
             my mind active and creative.
           </p>
-        </div>
-
-        <!-- Added my skills-->
         <h2>Skills</h2>
         <ul>
           <li>Water Treatment Plant Operations</li>
@@ -312,59 +324,11 @@
                   >I'm a US Army Veteran and a proud US Navy Spouse.</strong
                 ></a
               >
-              <p>
-                I am deeply proud to have served in the United States Army and
-                equally honored to stand as the spouse of an active US Navy
-                service member. This unique dual connection to the military has
-                provided me with a profound appreciation for service, sacrifice,
-                and the commitment required to protect our nation.
-              </p>
-              <p>
-                My personal experiences in the Army played a fundamental role in
-                shaping who I am today. The military instilled in me core values
-                like discipline, adaptability, teamwork, and resilience under
-                pressure—qualities that continue to guide my personal and
-                professional life every day.
-              </p>
-              <p>
-                Transitioning into the role of a Navy spouse gave me a new
-                perspective on military life. Supporting my partner through the
-                unique demands of naval service—such as deployments, frequent
-                relocations, and unpredictable schedules—requires a different
-                kind of strength, patience, and dedication.
-              </p>
-              <p>
-                Being part of both the Army and Navy communities has connected
-                me with extraordinary individuals from all walks of life. The
-                shared bonds, unspoken understanding, and mutual support found
-                within military families create an incredibly strong sense of
-                belonging and community resilience.
-              </p>
-              <p>
-                Ultimately, I am deeply grateful for the opportunities, growth,
-                and lifelong relationships that have come from both wearing the
-                uniform and supporting one. These military roots form a strong
-                foundation for my family, reminding us daily of the value of
-                duty, flexibility, and service.
-              </p>
+              <p>I am deeply</p>
             </li>
           </ol>
-
-          <!-- Coins section placed before footer -->
-          <div class="coins-container">
-            <img src="images/coinarmy.PNG" alt="Army Coin" class="coins" />
-            <img
-              src="images/coinnavyspouse.PNG"
-              alt="Navy Spouse Coin"
-              class="coins"
-            />
-          </div>
         </section>
       </main>
-
-      <footer>
-        <p>&copy; 2026 TJ Miranda. All rights reserved.</p>
-      </footer>
     </div>
   </body>
 </html>
