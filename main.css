@@ -24,6 +24,31 @@
   letter-spacing: 1px;
 }
 
+.biopic {
+  float: right;
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Flexbox wrapper to align coins side-by-side */
+.coins-container {
+  display: flex;
+  justify-content: center; /* Horizontally centers the coins */
+  align-items: center;     /* Vertically aligns the coins */
+  gap: 20px;               /* Space between Army and Navy coins */
+  margin: 25px 0;          /* Spacing above and below the coins section */
+}
+
+/* Centered 1.5in x 1.5in coins */
+.coins {
+  display: inline-block;
+  width: 1.5in;
+  height: 1.5in;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 /* Primary stylesheet for COMP001A Module 4 Assignment: Web Developer
    Author: TJ Miranda */
 
@@ -42,6 +67,7 @@ footer {
   color: #fff;            /* Matches header text color */
   padding: 1rem 1.5rem;   /* Matches header padding */
   text-align: center;
+  clear: both;            /* Prevents floats from overflowing into the footer */
 }
 
 footer a {
