@@ -79,7 +79,7 @@ div img {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: right;
+  align-items: center;
   background-color: #333;
   padding: 1rem 1.5rem;
   position: relative;
