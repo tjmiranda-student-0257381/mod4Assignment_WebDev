@@ -51,7 +51,7 @@ div img {
   height: auto;
 }
 
-/* --- Custom Logo Styles --- */
+/* --- Custom Logo Styles - text logo lang muna :) --- */
 .logo {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
@@ -147,7 +147,7 @@ div img {
   object-fit: cover;
 }
 
-/* --- Services Section Styles --- */
+/* --- Services Section Styles sa service.html na page --- */
 #services-details {
   margin-top: 30px;
   margin-bottom: 40px;
@@ -175,7 +175,7 @@ div img {
   color: #444444;
 }
 
-/* --- Form Styles --- */
+/* --- ito yung css sa contact form, basta may word na form lol --- */
 .form-container {
   background: #f7f4f4;
   padding: 30px;
@@ -268,7 +268,7 @@ div img {
 }
 
 .submit-btn:hover {
-  background-color: #0056b3;
+  background-color: #0056b3;/*...hanggang dito yung mga css ng contact form...*/
 }
 
 /* --- Footer Styles --- */
