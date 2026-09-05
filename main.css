@@ -17,6 +17,7 @@ main {
   flex: 1; /* Pushes footer to the bottom */
 }
 
+/* --- ito yung sa container ng buong website, nasa <body></body> --- */
 .container {
   max-width: 900px;
   width: 90%;
@@ -26,7 +27,7 @@ main {
   box-sizing: border-box;
 }
 
-/* --- Typography & Global Elements --- */
+/* --- Typography at ang Global Elements --- */
 h1 {
   font-size: 180%;
   color: #0033cc;
@@ -81,7 +82,7 @@ div img {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   background-color: #333;
   padding: 1rem 1.5rem;
   position: relative;
