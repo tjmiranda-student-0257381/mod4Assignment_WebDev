@@ -268,7 +268,7 @@ div img {
 }
 
 .submit-btn:hover {
-  background-color: #0056b3;/*...hanggang dito yung mga css ng contact form...*/
+  background-color: #0056b3;
 }
 
 /* --- Footer Styles --- */
@@ -304,27 +304,47 @@ footer a {
     display: flex;
   }
 
+  /* --- Updated mobile menu styles para mas ok tingnan --- */
   .nav-menu {
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
+    right: 0;             
+    left: auto;           
+    width: 250px;         
     background-color: #333;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
-    box-sizing: border-box;
-    padding: 0;
+    align-items: stretch; 
+    padding: 0;           
+    margin: 0;
+    box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.4); 
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    transition: max-height 0.3s ease-in-out;
+    z-index: 1000;        
   }
 
-  /* Hamburger Toggle Animation & Menu Open */
   .menu-toggle:checked ~ .nav-menu {
-    max-height: 300px;
-    padding: 1rem 0;
+    max-height: 400px;    
   }
+
+  .nav-menu li {
+    width: 100%;
+    border-bottom: 1px solid #4a4a4a; 
+  }
+
+  .nav-menu li:last-child {
+    border-bottom: none; 
+  }
+
+  .nav-link {
+    display: block;
+    padding: 18px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;    
+    font-size: 1rem;
+    color: #fff;
+  }
+  /* ---------------------------------- */
 
   .menu-toggle:checked ~ .hamburger-label .bar:nth-child(1) {
     transform: translateY(8.5px) rotate(45deg);
