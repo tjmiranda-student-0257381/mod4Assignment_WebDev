@@ -10,17 +10,14 @@
     <div class="container">
       <header>
         <nav class="navbar">
-          <a href="index.html" class="logo"
-            ><!-- ito yung text logo ng website -->
+          <a href="index.html" class="logo">
             <span class="logo-prefix">it's me</span>
-            <span class="logo-name">TJ</span
-            ><!--oh diba ang cute ng logo ko :) 
-            lol dito lang ako mag comment di na sa ibang page bro kasi tinatamad ako hehe, 
-            same lang din naman kaso sa iba walang comment-->
+            <span class="logo-name">TJ</span>
           </a>
-
+          <!-- Hidden Checkbox Toggle -->
           <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
+          <!-- BurgerFriesTapsilog -->
           <label
             for="menu-toggle"
             class="hamburger-label"
@@ -31,12 +28,12 @@
             <span class="bar"></span>
           </label>
 
+          <!-- Navigation Links -->
           <ul class="nav-menu">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
             <li><a href="services.html" class="nav-link">Services</a></li>
-            <li><a href="resume.html" class="nav-link">Resume</a></li>
-            <li><a href="faqs.html" class="nav-link">FAQs</a></li>
+            <!-- <li><a href="web-categories.html" class="nav-link">Web Categories</a></li> -->
           </ul>
         </nav>
       </header>
@@ -66,13 +63,14 @@
               brand-new personal portfolio, an online business store, or custom
               front-end styling using standard HTML, CSS, and JavaScript, I
               build websites designed to present your content clearly across all
-              devices.
+              devices. Click <a href="services.html#web-categories"><b>HERE</b></a> to learn more about the different types of web architectures and categories.
             </p>
             <ul>
               <li>Responsive and mobile-friendly site layouts</li>
               <li>Custom CSS styling and interface design</li>
               <li>Form integrations and website maintenance</li>
             </ul>
+            <a href="services.html#inquire-now"><button class="submit-btn" style="margin-top: 15px;">Inquire Now</button></a>
           </article>
 
           <!-- Service 2: Immigration Consulting -->
@@ -93,6 +91,7 @@
               <li>Naturalization and citizenship paperwork preparation</li>
               <li>Document accuracy review before official submission</li>
             </ul>
+            <a href="services.html#inquire-now"><button class="submit-btn" style="margin-top: 15px;">Inquire Now</button></a>
           </article>
 
           <!-- Service 3: Divorce Processing -->
@@ -110,6 +109,7 @@
               <li>Help with filing workflows and procedural timelines</li>
               <li>Organized document processing for uncontested matters</li>
             </ul>
+            <a href="services.html#inquire-now"><button class="submit-btn" style="margin-top: 15px;">Inquire Now</button></a>
           </article>
         </section>
 
@@ -205,10 +205,111 @@
             </form>
           </div>
         </section>
+        <section id="web-categories">
+          <h2>Understanding Web Categories</h2>
+          <p>
+            Web architecture generally falls into a few primary categories based on how content is generated, 
+            structured, and delivered to the browser. Below is a breakdown of the different types of modern websites and web applications.
+          </p>
+        </section>
+
+        <section>
+          <h2>Static Site Generation (SSG) / Jamstack</h2>
+          <ul>
+            <li>
+              <strong>How it works:</strong> Developers write code using component-based frameworks, 
+              but a build process pre-renders all routes into static HTML, CSS, and JS files before deployment. 
+              These static assets are then served globally via a CDN or standard static hosting. <em>This portfolio is a practical example of static deployment, built efficiently and hosted directly on GitHub Pages.</em>
+            </li>
+            <li>
+              <strong>Best for:</strong> High-traffic landing pages, portfolios, marketing sites, and documentation that require extreme load speed and top-tier security.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Single-Page Applications (SPAs)</h2>
+          <ul>
+            <li>
+              <strong>How it works:</strong> The browser loads a single HTML shell, and client-side JavaScript takes over all routing and state management. The application fetches data in the background and dynamically updates the screen without ever triggering a full page reload.
+            </li>
+            <li>
+              <strong>Best for:</strong> Highly interactive platforms, SaaS tools, and complex dashboards where a seamless, app-like experience is critical.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Dynamic Websites (Server-Side Rendered)</h2>
+          <ul>
+            <li>
+              <strong>How it works:</strong> A backend server constructs the HTML on the fly for every single user request. It queries a database, injects the data into a template, and sends the fully formed HTML to the client.
+            </li>
+            <li>
+              <strong>Best for:</strong> Platforms where content changes constantly and SEO is paramount, such as news sites, forums, and traditional MVC web applications.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Content Management Systems (CMS)</h2>
+          <ul>
+            <li>
+              <strong>How it works:</strong> A software layer that separates content from code. It provides an admin dashboard for non-technical users to write content, which is saved to a database. The CMS engine handles assembling and rendering the final pages.
+            </li>
+            <li>
+              <strong>Best for:</strong> Business websites, traditional blogs, and standard e-commerce stores (e.g., WordPress, Shopify) where content needs constant updating without developer intervention.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Progressive Web Apps (PWAs)</h2>
+          <ul>
+            <li>
+              <strong>How it works:</strong> Standard web applications enhanced with modern web APIs like Service Workers and a Web App Manifest. They can cache resources to run offline, install directly to a user's device, and receive push notifications.
+            </li>
+            <li>
+              <strong>Best for:</strong> Mobile-first experiences and tools meant to function reliably in areas with poor network connectivity, blurring the line between websites and native mobile apps.
+            </li>
+          </ul>
+        </section>
       </main>
 
       <footer>
-        <p>&copy; 2024 TJ Miranda. All rights reserved.</p>
+        <div class="footer-faqs" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="faqs.html">Faqs</a>
+        </div>
+        
+        <div class="footer-icons">
+          <!-- Resume Icon -->
+          <a href="resume.html" class="circle-icon resume-icon" aria-label="Resume">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <line x1="10" y1="9" x2="8" y2="9"></line>
+            </svg>
+          </a>
+          
+          <!-- GitHub Icon -->
+          <a href="https://github.com/tjmiranda" target="_blank" rel="noopener noreferrer" class="circle-icon github-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+
+          <!-- Facebook Icon -->
+          <a href="https://www.facebook.com/nomoreneym" target="_blank" rel="noopener noreferrer" class="circle-icon fb-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+        </div>
+        <p>&copy; 2026 <a href="https://tjmiranda.com" target="_blank" rel="noopener noreferrer">TJ Miranda</a>. All rights reserved.</p>
       </footer>
     </div>
   </body>

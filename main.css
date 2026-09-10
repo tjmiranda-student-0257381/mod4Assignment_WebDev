@@ -17,7 +17,6 @@ main {
   flex: 1; /* Pushes footer to the bottom */
 }
 
-/* --- ito yung sa container ng buong website, nasa <body></body> --- */
 .container {
   max-width: 900px;
   width: 90%;
@@ -27,7 +26,7 @@ main {
   box-sizing: border-box;
 }
 
-/* --- Typography at ang Global Elements --- */
+/* --- Typography & Global Elements --- */
 h1 {
   font-size: 180%;
   color: #0a0a0a;
@@ -51,7 +50,26 @@ div img {
   height: auto;
 }
 
-/* --- Custom Logo Styles - text logo lang muna :) --- */
+/* ==========================================
+   Beautiful & Professional Header Styles
+   ========================================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Kept 333 to match my existing styling, or change to 222 to my match footer */
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+/* --- Custom Logo Styles --- */
 .logo {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
@@ -59,16 +77,20 @@ div img {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  transition: transform 0.3s ease;
 }
 
-/* --- ito yung kulay ng first part ng text logo ng website --- */
+.logo:hover {
+  transform: scale(1.05);
+}
+
 .logo-prefix {
   font-weight: 300;
   color: #cccccc;
   font-size: 1.1rem;
   text-transform: lowercase;
 }
-/* --- ito yung kulay ng TJ sa logo ng website --- */
+
 .logo-name {
   font-weight: 800;
   color: #ffffff;
@@ -76,38 +98,61 @@ div img {
   padding: 2px 8px;
   border-radius: 4px;
   letter-spacing: 1px;
+  transition: background-color 0.3s ease;
 }
 
-/* --- Navigation Bar Styles --- */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: left;
-  background-color: #333;
-  padding: 1rem 1.5rem;
-  position: relative;
+.logo-name:hover {
+  background-color: #ff0000; 
 }
 
+/* --- Navigation Links --- */
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
 
 .nav-link {
-  color: #fff;
+  color: #e0e0e0;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
 }
 
+.nav-link:hover {
+  color: #ff0000; 
+}
+
+/* Animated Underline on Hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff0000;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* --- Mobile Menu Toggle --- */
 .menu-toggle {
-  display: none; /* Hide checkbox */
+  display: none; 
 }
 
 .hamburger-label {
-  display: none; /* Hide on desktop */
+  display: none; 
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
@@ -123,7 +168,9 @@ div img {
   transition: all 0.3s ease-in-out;
 }
 
-/* --- Profile & Coin Media Styles --- */
+/* ==========================================
+   Content Sections (Profile, Services, Forms)
+   ========================================== */
 .biopic {
   float: right;
   width: 100px;
@@ -147,7 +194,6 @@ div img {
   object-fit: cover;
 }
 
-/* --- Services Section Styles sa service.html na page --- */
 #services-details {
   margin-top: 30px;
   margin-bottom: 40px;
@@ -175,7 +221,7 @@ div img {
   color: #444444;
 }
 
-/* --- ito yung css sa contact form, basta may word na form lol --- */
+/* --- Contact Form Styles --- */
 .form-container {
   background: #f7f4f4;
   padding: 30px;
@@ -268,20 +314,96 @@ div img {
 }
 
 .submit-btn:hover {
-  background-color: #0056b3;
+  background-color: #ff0000; 
 }
 
-/* --- Footer Styles --- */
+/* ==========================================
+   Footer Styles
+   ========================================== */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem 1.5rem;
+  background-color: #222; 
+  color: #e0e0e0;
+  padding: 2.5rem 1.5rem 1.5rem; 
   text-align: center;
   clear: both;
 }
 
 footer a {
   color: #fff;
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+}
+
+footer a:hover {
+  color: #ff0000; 
+  text-decoration: none; 
+}
+
+.footer-faqs {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-faqs a {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 0.75rem; 
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.circle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #444; 
+  color: #ffffff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.circle-icon:hover {
+  transform: translateY(-5px); 
+  color: #ffffff !important; 
+}
+
+.resume-icon:hover {
+  background-color: #28a745; 
+}
+
+.github-icon:hover {
+  background-color: #000000; 
+}
+
+.fb-icon:hover {
+  background-color: #1877f2; 
+}
+
+.icon-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.social-svg {
+  width: 22px;
+  height: 22px;
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  margin-top: 10px;
 }
 
 /* ==========================================
@@ -304,17 +426,16 @@ footer a {
     display: flex;
   }
 
-  /* --- Updated mobile menu styles para mas ok tingnan --- */
   .nav-menu {
     position: absolute;
     top: 100%;
-    right: 0;             
-    left: auto;           
-    width: 250px;         
+    right: 0;            
+    left: auto;          
+    width: 250px;        
     background-color: #333;
     flex-direction: column;
     align-items: stretch; 
-    padding: 0;           
+    padding: 0;          
     margin: 0;
     box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.4); 
     max-height: 0;
@@ -344,7 +465,10 @@ footer a {
     font-size: 1rem;
     color: #fff;
   }
-  /* ---------------------------------- */
+
+  .nav-link::after {
+    display: none; /* Disables the animated underline on mobile menus for cleaner UX */
+  }
 
   .menu-toggle:checked ~ .hamburger-label .bar:nth-child(1) {
     transform: translateY(8.5px) rotate(45deg);
